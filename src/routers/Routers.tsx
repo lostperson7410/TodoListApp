@@ -1,9 +1,9 @@
 // this is the main router file for the app
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ROUTE_PATH } from '../Constant/routePath';
-import Home from '../Screens/Home';
-import AddTodo from '../Screens/AddTodo';
+import { ROUTE_PATH } from '../constant/routePath';
+import Home from '../screens/Home';
+import AddTodo from '../screens/AddTodo';
 
 const Stack = createNativeStackNavigator();
 
