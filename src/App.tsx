@@ -20,7 +20,7 @@ function App() {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <SafeAreaView edges={['top', 'bottom']} style={styles.container}>
+        <SafeAreaView edges={['top']} style={styles.container}>
           <NavigationContainer>
             <Routers/>
           </NavigationContainer>
