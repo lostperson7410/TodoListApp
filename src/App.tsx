@@ -5,9 +5,10 @@
  * @format
  */
 
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { StyleSheet,} from 'react-native';
 import {
   SafeAreaProvider,
+  SafeAreaView,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import Routers from './routers/Routers';
@@ -16,24 +17,17 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <AppContent />
+        <SafeAreaView edges={['top', 'bottom']}>
+          <NavigationContainer>
+            <Routers/>
+          </NavigationContainer>
+        </SafeAreaView>
       </SafeAreaProvider>
     </Provider>
-  );
-}
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
-  return (
-    <NavigationContainer>
-      <Routers/>
-    </NavigationContainer>
   );
 }
 
