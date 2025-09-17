@@ -20,7 +20,7 @@ function App() {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <SafeAreaView edges={['top']} style={styles.container}>
+        <SafeAreaView edges={['top','bottom']} style={styles.container}>
           <NavigationContainer>
             <Routers/>
           </NavigationContainer>
@@ -33,6 +33,7 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'transparent',
   },
 });
 
