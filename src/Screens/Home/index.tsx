@@ -71,4 +71,79 @@ const Home = () => {
     );
 };
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 16,
+        backgroundColor: '#f5f5f5',
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 16,
+        textAlign: 'center',
+        color: '#333',
+    },
+    list: {
+        flex: 1,
+    },
+    todoItem: {
+        flexDirection: 'row',
+        backgroundColor: 'white',
+        padding: 16,
+        borderRadius: 8,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
+    },
+    todoContent: {
+        flex: 1,
+    },
+    todoTitle: {
+        fontSize: 18,
+        fontWeight: '600',
+        color: '#333',
+        marginBottom: 4,
+    },
+    completedTodo: {
+        textDecorationLine: 'line-through',
+        color: '#999',
+    },
+    todoDescription: {
+        fontSize: 14,
+        color: '#666',
+        marginBottom: 8,
+    },
+    todoDate: {
+        fontSize: 12,
+        color: '#999',
+    },
+    deleteButton: {
+        backgroundColor: '#ff4444',
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+        borderRadius: 4,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    deleteButtonText: {
+        color: 'white',
+        fontWeight: '600',
+    },
+    separator: {
+        height: 12,
+    },
+    emptyText: {
+        textAlign: 'center',
+        fontSize: 16,
+        color: '#666',
+        marginVertical: 32,
+    },
+});
+
 export default Home;
