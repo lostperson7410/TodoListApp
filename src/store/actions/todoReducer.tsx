@@ -4,7 +4,29 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Todo, TodoState } from '../../types/todo';
 
 const initialState: TodoState = {
-  todos: [],
+  todos: [
+    {
+      id: '1',
+      title: 'Create Project',
+      description: 'Buy groceries for the week',
+      completed: false,
+      createdAt: new Date().toISOString(),
+    },
+    {
+      id: '2',
+      title: 'Setup Redux',
+      description: 'Finish the project for the week',
+      completed: false,
+      createdAt: new Date().toISOString(),
+    },
+    {
+      id: '3',
+      title: 'Setup React Navigation',
+      description: 'Finish the project for the week',
+      completed: false,
+      createdAt: new Date().toISOString(),
+    },
+  ],
 };
 
 export const todoSlice = createSlice({
