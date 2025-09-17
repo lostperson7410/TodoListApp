@@ -5,11 +5,10 @@
  * @format
  */
 
-import { StyleSheet,} from 'react-native';
+import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
   SafeAreaView,
-  useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import Routers from './routers/Routers';
 import { NavigationContainer } from '@react-navigation/native';
@@ -21,7 +20,7 @@ function App() {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <SafeAreaView edges={['top', 'bottom']}>
+        <SafeAreaView edges={['top', 'bottom']} style={styles.container}>
           <NavigationContainer>
             <Routers/>
           </NavigationContainer>
